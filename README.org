@@ -1,0 +1,131 @@
+#+TITLE: Scrumと要求工学
+#+AUTHOR: 産業技術大学院大学 \linebreak 中鉢 欣秀
+#+DATE: 2014-10-09
+#+BEAMER_THEME: Madrid
+#+OPTIONS: toc:nil
+#+OPTIONS: H:1
+#+OPTIONS: ^:nil
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.0 :ETC
+# #+LaTeX_CLASS_OPTIONS: [14pt]
+
+
+* enPiTについて
+ - enPiT（エンピット）は最先端の情報技術を実践的に活用することができる
+   人材育成を目指しています。
+ - クラウドコンピューティング、セキュリティ、組込みシステム、
+   ビジネスアプリケーションの4つの分野において、
+   大学と産業界による全国的なネットワークを形成し、
+   実践的な情報教育の普及・推進を図ります。
+
+* AIITのenPiTにおけるアジャイル開発
+   - 事前学習
+     - アジャイル開発の方法論
+     - アジャイル開発で利用するツール
+   - Project Based Learning
+     - Scrumによりプロジェクトを実施
+     - 毎週1回のレビュー
+     - 期間は11週間
+
+* Scrumに入る前の要求分析
+** エレベータピッチ
+    - 忙しくて時間をとってもらえないエグゼクティブや重役に対して、
+      こちらの無力を伝えるプレゼンテーションを
+      重役室までのエレベーターの中というごく短時間の中で行なうこと
+** リーンキャンバス
+    - ビジネスのアイディアを一目瞭然にする（詳細は省略）
+
+* Scrumにおける要求の取り扱い
+  - Product owner (PO)
+    - 製品の所有者
+    - POの定義は様々
+      - 製品の仕様に責任を持つ人
+      - 製品を投入するマーケットをよく知っている人
+      - スティーブジョブスのこと
+  - Product backlog (PB)
+    - 「ユーザーストーリー」等の集合
+      - 製品のビジョンを実現するために必要な機能
+    - POが優先順位をつける
+    - POはPBを活発に更新する
+
+* Product backlogとSprint backlog
+  - Product backlogの理解と成長
+    - 開発チームはPOの話を理解する
+    - POは開発チームが納得するまで説明する
+    - 両者は共同してPBを「gloom」する
+  - Sprint backlogの作成
+    - Sprintとは，優先順位に従い，
+      PBの一部を実装するtime box
+    - PBを実現するための作業を
+      Sprint backlogに落としこむ
+
+* ユーザストーリーのルール（INVEST）
+  - Independent（独立している）
+  - Negotiable（交渉可能）
+  - Valuable（価値がある）
+  - Estimable（見積り可能）
+  - Sized right / Small（適切な大きさ）
+  - Testable（テスト可能）
+
+* 「PBの項目はReadyであること」
+  - 下記のような例は満たされない
+    - そもそもなんのためにそのPB項目があるのか分からない
+    - PB項目の内容が曖昧または抽象的すぎて、作るべきものが分からない。または人によって著しく成果物のイメージが異なる
+    - PB項目に受け入れ条件がないため、何ができたらそのバックログ項目が完了になるのか分からない
+    - PB項目の受け入れ条件が抽象的もしくは測定困難（クールな画面とか応答が速いとか）
+    - 同様にPB項目のデモの仕方がわからない
+    - PB項目が大きすぎて、１つの項目に含まれる作業が膨大になってしまう。それ故抜け漏れが大量に発生する
+    - PB項目の他への依存度が高すぎて、具体的な作業内容や作業順序のイメージがつかない
+
+* COMMENT Doneの定義
+  - 「出荷可能な製品」を作成するために実施しなければいけないことの一覧
+    - 例
+      - ユニットテストのカバー率N%
+      - ドキュメンテーション（リリースノート等）
+  - Doneの定義なくしてScrumはありえない
+
+* 要求工学との関連
+  - Scrumにおける「要求の獲得」
+    - POと開発者が話し合い，PBを成長させる
+  - Scrumにおける「要求の記述」
+    - Product backlogを用いる
+
+* Scrumで忘れ去られていること
+  - より形式的な記述やモデル化
+    - PBはユーザの言葉
+    - SBに「モデル化」や「仕様化」の作業が入るはず
+  - Product/Sprint Backlogの品質
+    - Backlogの品質や望ましい書き方は？
+    - そのための体系的な方法は？
+    
+* COMMENT Product ownerの教育
+  - 要求を出す側の教育
+  - バックロググルーミング
+    - POとの会議体
+    - POからの要求の引き出し方
+    - 円滑にPOと対話するスキル
+
+* ハッカソン「Demo or die」
+  - 考え方
+    - 毎回必ず動くソフトウエアのデモをして見せる
+    - どんなプレゼン資料よりも正しく現状が共有できる
+  - スプリントごとのデモ
+    - 最新の製品が常にレビューできるようになっていること
+
+* ツールの連携とレビューのサイクル
+
+#+CAPTION: Tools used in enPiT Program.
+#+NAME:   fig:tools
+#+ATTR_LATEX: :width .75\linewidth
+[[./tools.pdf]]
+  
+* enPiTのPBLの様子
+  - いつでもデモができるようになっている
+  - [[https://github.com/ychubachi/enpit/wiki/%E5%88%86%E6%95%A3PBL%EF%BC%882014%EF%BC%89][分散PBL（2014） · ychubachi/enpit Wiki]]
+
+* 参考文献
+  - [[http://kray.jp/blog/attractive-product-backlog/][魅力的なプロダクトバックログで開発を楽しく！ | KRAY Inc]]
+  - [[http://www.ryuzee.com/contents/blog/5024][{Scrum}プロダクトバックログ項目の明確化の必要性 | Ryuzee.com]]
+  - [[http://master-consultant.jp/%E3%82%A8%E3%83%AC%E3%83%99%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%94%E3%83%83%E3%83%81%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/][一瞬で見込みクライアントのハートをつかむエレベーターピッチの作り方 | コンサル大学　トップ4％のコンサルタントになる！]]
+  - [[http://www.slideshare.net/studytech/ss-23454300][リーンキャンバスとは]]
+    
