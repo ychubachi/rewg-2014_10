@@ -1,4 +1,4 @@
-% Created 2014-10-09 木 17:07
+% Created 2014-10-09 木 17:51
 \documentclass[t]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -41,7 +41,9 @@
 \maketitle
 
 
-\begin{frame}[label=sec-1]{enPiTについて}
+\section{enPiTについて}
+\label{sec-1}
+\begin{frame}[label=sec-1-1]{enPiTについて}
 \begin{itemize}
 \item enPiT（エンピット）は最先端の情報技術を実践的に活用することができる
 人材育成を目指しています。
@@ -52,7 +54,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2]{AIITのenPiTにおけるアジャイル開発}
+\begin{frame}[label=sec-1-2]{AIITのenPiTにおけるアジャイル開発}
 \begin{itemize}
 \item 事前学習
 \begin{itemize}
@@ -68,7 +70,9 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-3]{Scrumに入る前の要求分析}
+\section{アジャイル開発における要求の取り扱い}
+\label{sec-2}
+\begin{frame}[label=sec-2-1]{企画・アイディアの段階}
 \begin{block}{エレベータピッチ}
 \begin{itemize}
 \item 忙しくて時間をとってもらえないエグゼクティブや重役に対して、
@@ -83,9 +87,8 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-4]{Scrumにおける要求の取り扱い}
-\begin{itemize}
-\item Product owner (PO)
+\begin{frame}[label=sec-2-2]{Scrumにおける要求}
+\begin{block}{Product owner (PO)}
 \begin{itemize}
 \item 製品の所有者
 \item POの定義は様々
@@ -95,7 +98,8 @@
 \item スティーブジョブスのこと
 \end{itemize}
 \end{itemize}
-\item Product backlog (PB)
+\end{block}
+\begin{block}{Product backlog (PB)}
 \begin{itemize}
 \item 「ユーザーストーリー」等の集合
 \begin{itemize}
@@ -104,28 +108,10 @@
 \item POが優先順位をつける
 \item POはPBを活発に更新する
 \end{itemize}
-\end{itemize}
+\end{block}
 \end{frame}
 
-\begin{frame}[label=sec-5]{Product backlogとSprint backlog}
-\begin{itemize}
-\item Product backlogの理解と成長
-\begin{itemize}
-\item 開発チームはPOの話を理解する
-\item POは開発チームが納得するまで説明する
-\item 両者は共同してPBを「gloom」する
-\end{itemize}
-\item Sprint backlogの作成
-\begin{itemize}
-\item Sprintとは，優先順位に従い，
-PBの一部を実装するtime box
-\item PBを実現するための作業を
-Sprint backlogに落としこむ
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label=sec-6]{ユーザストーリーのルール（INVEST）}
+\begin{frame}[label=sec-2-3]{ユーザストーリーのルール（INVEST）}
 \begin{itemize}
 \item Independent（独立している）
 \item Negotiable（交渉可能）
@@ -136,7 +122,7 @@ Sprint backlogに落としこむ
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-7]{「PBの項目はReadyであること」}
+\begin{frame}[label=sec-2-4]{「PBの項目はReadyであること」}
 \begin{itemize}
 \item 下記のような例は満たされない
 \begin{itemize}
@@ -151,7 +137,9 @@ Sprint backlogに落としこむ
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-8]{要求工学との関連}
+\section{Scrumと要求工学}
+\label{sec-3}
+\begin{frame}[label=sec-3-1]{要求工学との関連}
 \begin{itemize}
 \item Scrumにおける「要求の獲得」
 \begin{itemize}
@@ -164,22 +152,31 @@ Sprint backlogに落としこむ
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-9]{Scrumで忘れ去られていること}
+\begin{frame}[label=sec-3-2]{Scrumで忘れ去られていること}
 \begin{itemize}
 \item より形式的な記述やモデル化
 \begin{itemize}
-\item PBはユーザの言葉
-\item SBに「モデル化」や「仕様化」の作業が入るはず
+\item PBはユーザの言葉だとして，
+SBに「モデル化」や「仕様化」の作業が入るはず
+\end{itemize}
+\item 非機能要求
+\begin{itemize}
+\item だれがどう定義するのか
 \end{itemize}
 \item Product/Sprint Backlogの品質
 \begin{itemize}
 \item Backlogの品質や望ましい書き方は？
 \item そのための体系的な方法は？
+\begin{itemize}
+\item 制限言語？
+\end{itemize}
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-10]{ハッカソン「Demo or die」}
+\section{レビューを中心としたスタイル}
+\label{sec-4}
+\begin{frame}[label=sec-4-1]{ハッカソン「Demo or die」}
 \begin{itemize}
 \item 考え方
 \begin{itemize}
@@ -193,7 +190,7 @@ Sprint backlogに落としこむ
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-11]{ツールの連携とレビューのサイクル}
+\begin{frame}[label=sec-4-2]{ツールの連携とレビューのサイクル}
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.75\linewidth]{./tools.pdf}
@@ -201,14 +198,16 @@ Sprint backlogに落としこむ
 \end{figure}
 \end{frame}
 
-\begin{frame}[label=sec-12]{enPiTのPBLの様子}
+\begin{frame}[label=sec-4-3]{enPiTのPBLの様子}
 \begin{itemize}
 \item いつでもデモができるようになっている
 \item \href{https://github.com/ychubachi/enpit/wiki/\%E5\%88\%86\%E6\%95\%A3PBL\%EF\%BC\%882014\%EF\%BC\%89}{分散PBL（2014） · ychubachi/enpit Wiki}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-13]{参考文献}
+\section{参考文献}
+\label{sec-5}
+\begin{frame}[label=sec-5-1]{参考文献}
 \begin{itemize}
 \item \href{http://kray.jp/blog/attractive-product-backlog/}{魅力的なプロダクトバックログで開発を楽しく！ | KRAY Inc}
 \item \href{http://www.ryuzee.com/contents/blog/5024}{\{Scrum\}プロダクトバックログ項目の明確化の必要性 | Ryuzee.com}
